@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
+import utilStyles from '../../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Chloe Langford'
@@ -53,7 +53,11 @@ export default function Layout({ children, home }) {
                     </>
                 )}
             </header>
-            <main>{children}</main>
+            <main>
+                <div className={styles.wrapper}>
+                    {children}
+                </div>
+            </main>
             {!home && (
                 <div className={styles.backToHome}>
                     <Link href="/">
@@ -61,6 +65,35 @@ export default function Layout({ children, home }) {
                     </Link>
                 </div>
             )}
+
+            <footer className={styles.footer}>
+                <article>
+                    <h3>Footer Column</h3>
+                    <ul className={styles.footerList}>
+                        <li>Link</li>
+                        <li>Link</li>
+                        <li>Link</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Footer Column</h3>
+                    <ul className={styles.footerList}>
+                        <li>Link</li>
+                        <li>Link</li>
+                        <li>Link</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Footer Column</h3>
+                    <ul className={styles.footerList}>
+                        <li>Link</li>
+                        <li>Link</li>
+                        <li>Link</li>
+                    </ul>
+                </article>
+            </footer>
         </div>
     )
 }

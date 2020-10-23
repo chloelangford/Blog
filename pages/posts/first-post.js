@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout/layout'
 
 export default function FirstPost() {
     return (
@@ -17,13 +17,6 @@ export default function FirstPost() {
                     <a>Back to home</a>
                 </Link>
             </h2>
-
-            <style jsx>{`
-                .container {
-                    background-color: #f3f3f3;
-                }
-            `}</style>
-
         </div>
         </Layout>
     )
